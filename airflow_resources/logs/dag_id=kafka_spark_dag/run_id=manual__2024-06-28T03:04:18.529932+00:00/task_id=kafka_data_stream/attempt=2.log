@@ -1,0 +1,23 @@
+[2024-06-28T03:34:42.271+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_spark_dag.kafka_data_stream manual__2024-06-28T03:04:18.529932+00:00 [queued]>
+[2024-06-28T03:34:42.275+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_spark_dag.kafka_data_stream manual__2024-06-28T03:04:18.529932+00:00 [queued]>
+[2024-06-28T03:34:42.275+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 3
+[2024-06-28T03:34:42.281+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): kafka_data_stream> on 2024-06-28 03:04:18.529932+00:00
+[2024-06-28T03:34:42.285+0000] {standard_task_runner.py:57} INFO - Started process 3097 to run task
+[2024-06-28T03:34:42.288+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_spark_dag', 'kafka_data_stream', 'manual__2024-06-28T03:04:18.529932+00:00', '--job-id', '192', '--raw', '--subdir', 'DAGS_FOLDER/dag_kafka_spark.py', '--cfg-path', '/tmp/tmpmt0lsuda']
+[2024-06-28T03:34:42.290+0000] {standard_task_runner.py:85} INFO - Job 192: Subtask kafka_data_stream
+[2024-06-28T03:34:42.317+0000] {task_command.py:416} INFO - Running <TaskInstance: kafka_spark_dag.kafka_data_stream manual__2024-06-28T03:04:18.529932+00:00 [running]> on host cd176cdca805
+[2024-06-28T03:34:42.357+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_spark_dag' AIRFLOW_CTX_TASK_ID='kafka_data_stream' AIRFLOW_CTX_EXECUTION_DATE='2024-06-28T03:04:18.529932+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-28T03:04:18.529932+00:00'
+[2024-06-28T03:34:42.360+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.19.0.3', 9092)]>: connecting to kafka:9092 [('172.19.0.3', 9092) IPv4]
+[2024-06-28T03:34:42.360+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-06-28T03:34:42.361+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.19.0.3', 9092)]>: Connection complete.
+[2024-06-28T03:34:42.465+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-06-28T03:34:42.465+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-06-28T03:34:42.918+0000] {kafka_stream_data.py:76} INFO - Got 20 results from the API
+[2024-06-28T03:34:42.922+0000] {conn.py:380} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.19.0.3', 9092)]>: connecting to kafka:9092 [('172.19.0.3', 9092) IPv4]
+[2024-06-28T03:34:42.923+0000] {conn.py:410} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connecting> [IPv4 ('172.19.0.3', 9092)]>: Connection complete.
+[2024-06-28T03:34:42.923+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.19.0.3', 9092)]>: Closing connection. 
+[2024-06-28T03:34:42.930+0000] {conn.py:919} INFO - <BrokerConnection node_id=0 host=kafka:9092 <connected> [IPv4 ('172.19.0.3', 9092)]>: Closing connection. 
+[2024-06-28T03:34:42.931+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-06-28T03:34:42.937+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=kafka_spark_dag, task_id=kafka_data_stream, execution_date=20240628T030418, start_date=20240628T033442, end_date=20240628T033442
+[2024-06-28T03:34:42.960+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-06-28T03:34:42.972+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
